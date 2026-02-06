@@ -14,7 +14,7 @@
   --light-gray: #cecece;
   --blue: #2196F3;
   --hover-color: #28a745;
-  
+
   --fs-1: 1.625rem;
   --fs-2: 1.5rem;
   --fs-3: 1.375rem;
@@ -27,34 +27,37 @@
   --fs-10: 0.75rem;
   --fs-11: 0.688rem;
   --fs-12: 0.625rem;
-  
+
   --weight-300: 300;
   --weight-400: 400;
   --weight-500: 500;
   --weight-600: 600;
   --weight-700: 700;
-  
+
   --border-radius-sm: 0.125rem;
   --border-radius-md: 0.25rem;
   --border-radius-lg: 0.5rem;
   --border-radius-xl: 1rem;
-  
+
   --transition-timing: 0.2s ease;
-  
+
   --section-padding: 60px;
 }
+
 @font-face {
   font-family: 'Eniza Regular';
   src: url('../assets/fonts/Eniza Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Safira March';
   src: url('../assets/fonts/Safira March Personal Use Only.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Monopola Script';
   src: url('../assets/fonts/Monopola Script DEMO.ttf') format('truetype');
@@ -63,14 +66,16 @@
 }
 
 /* RESET */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  font-family:'Eniza Regular', sans-serif;
+  font-family: 'Eniza Regular', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -81,7 +86,8 @@ body {
   line-height: 1.5;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -98,7 +104,10 @@ button {
   cursor: pointer;
 }
 
-img, ion-icon, button, a {
+img,
+ion-icon,
+button,
+a {
   display: block;
 }
 
@@ -107,6 +116,7 @@ input {
   width: 100%;
   border: none;
 }
+
 /* Header-top */
 /* Base Styles */
 .header-top {
@@ -147,12 +157,13 @@ input {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-.right{
-  display: none;
-}
-.left{
-  font-size: 12px;
-}
+  .right {
+    display: none;
+  }
+
+  .left {
+    font-size: 12px;
+  }
 
 }
 
@@ -164,17 +175,19 @@ input {
   margin: 0rem 4rem;
 }
 
-.container h1{
+.container h1 {
   font-size: 4rem;
   /* color: #98e209; */
-  color:#b09c5d;
+  color: #b09c5d;
 }
-.container p{
+
+.container p {
   font-family: 'Monopola Script';
   font-size: 24px;
-  color:#f6d110;
+  color: #f6d110;
   justify-content: start;
 }
+
 /* Desktop Navigation Menu */
 .desktop-navigation-menu {
   display: none;
@@ -196,7 +209,7 @@ input {
   justify-content: center;
 }
 
-.logo-content img{
+.logo-content img {
   height: 60px;
 }
 
@@ -214,6 +227,7 @@ input {
   border: 1px solid var(--cultured);
   border-radius: var(--border-radius-md);
 }
+
 .header-search-container input:focus {
   color: #000;
   border-color: var(--primary-color);
@@ -379,7 +393,7 @@ input {
   padding: 12px 0;
 }
 
-.accordion-menu > div {
+.accordion-menu>div {
   font-size: 14px;
 }
 
@@ -487,7 +501,8 @@ input {
   .header-user-actions {
     gap: 25px;
   }
-  .container{
+
+  .container {
     width: auto;
   }
 }
@@ -584,7 +599,7 @@ input {
     z-index: 10;
   }
 
-  .desktop-menu-category-list .menu-category:hover > .dropdown-list {
+  .desktop-menu-category-list .menu-category:hover>.dropdown-list {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
@@ -629,7 +644,7 @@ input {
     z-index: 10;
   }
 
-  .desktop-menu-category-list .menu-category:hover > .dropdown-panel {
+  .desktop-menu-category-list .menu-category:hover>.dropdown-panel {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
@@ -638,6 +653,7 @@ input {
 
   .dropdown-panel-list {
     width: 25%;
+    margin-right: 1rem;
   }
 
   .panel-list-item a {
@@ -670,30 +686,35 @@ input {
 }
 
 @media (min-width: 1024px) {
-  .container{
+  .container {
     width: auto;
     display: flex;
   }
-   .mobile-bottom-navigation{
-  display: none;
- }
+
+  .mobile-bottom-navigation {
+    display: none;
+  }
 
 }
+
 @media (max-width: 1024px) {
- .desktop-navigation-menu{
-  display: none;
- }
- .mobile-bottom-navigation{
-  display: flex;
- }
- .container{
-  width: auto;
- }
+  .desktop-navigation-menu {
+    display: none;
+  }
+
+  .mobile-bottom-navigation {
+    display: flex;
+  }
+
+  .container {
+    width: auto;
+  }
 }
+
 @media (max-width: 550px) {
- .logo-content img{
-  height:40px ;
- }
+  .logo-content img {
+    height: 40px;
+  }
 }
 
 

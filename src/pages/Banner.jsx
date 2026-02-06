@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper/modules';
+import { Scrollbar, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import './Banner.css';
@@ -15,15 +15,19 @@ const Banner = () => {
   return (
     <div className="banner-wrapper">
       <Swiper
-        modules={[Scrollbar]}
+        modules={[Scrollbar, Autoplay]}
         scrollbar={{ hide: true }}
-        spaceBetween={20}
+        spaceBetween={0}
         slidesPerView={1}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         className="banner-swiper"
       >
-        <SwiperSlide><img src={banner7} alt="Banner 1" /></SwiperSlide>
-        <SwiperSlide><img src={banner8} alt="Banner 2" /></SwiperSlide>
-        <SwiperSlide><img src={banner7} alt="Banner 3" /></SwiperSlide>
+        <SwiperSlide><img src={banner7} alt="Summer Collection" /></SwiperSlide>
+        <SwiperSlide><img src={banner8} alt="New Arrivals" /></SwiperSlide>
       </Swiper>
     </div>
   );

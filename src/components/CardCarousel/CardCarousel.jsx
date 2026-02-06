@@ -10,52 +10,52 @@ const CardCarousel = () => {
   const products = [
     {
       id: 1,
-      name: "Premium Wireless Headphones",
-      price: 129.99,
-      originalPrice: 179.99,
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
+      name: "Elegant Summer Floral Dress",
+      price: 49.99,
+      originalPrice: 79.99,
+      image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
       rating: 5,
       reviews: 127
     },
     {
       id: 2,
-      name: "Artisan Ceramic Mug",
-      price: 24.99,
-      image: "https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
+      name: "Classic Denim Jacket",
+      price: 64.99,
+      image: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
       rating: 4,
       reviews: 89
     },
     {
       id: 3,
-      name: "Vintage Leather Backpack",
-      price: 89.99,
-      originalPrice: 119.99,
-      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
+      name: "Urban Streetwear Hoodie",
+      price: 39.99,
+      originalPrice: 59.99,
+      image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
       rating: 5,
       reviews: 203
     },
     {
       id: 4,
-      name: "Desert Rose Succulent",
-      price: 18.99,
-      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
+      name: "Chic Leather Handbag",
+      price: 89.99,
+      image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
       rating: 4,
       reviews: 45
     },
     {
       id: 5,
-      name: "Pro Smartphone 128GB",
-      price: 699.99,
-      originalPrice: 799.99,
-      image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
+      name: "Modern Aviator Sunglasses",
+      price: 19.99,
+      originalPrice: 29.99,
+      image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
       rating: 5,
       reviews: 1247
     },
     {
       id: 6,
-      name: "Vanilla Bean Candle",
-      price: 32.99,
-      image: "https://images.unsplash.com/photo-1602874801006-7313ba5df42d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
+      name: "Running Sneakers",
+      price: 54.99,
+      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400",
       rating: 5,
       reviews: 156
     }
@@ -125,7 +125,7 @@ const CardCarousel = () => {
       {/* Header Section */}
       <div className="header">
         <h2 className="title">Popular Categories</h2>
-        
+
         {/* Navigation Arrows */}
         <div className="nav-buttons">
           <button
@@ -146,7 +146,7 @@ const CardCarousel = () => {
       </div>
 
       {/* Product Carousel */}
-      <div 
+      <div
         ref={carouselRef}
         onScroll={handleScroll}
         className="carousel-scroll"
@@ -161,11 +161,11 @@ const CardCarousel = () => {
                   alt={product.name}
                 />
               </div>
-              
+
               {/* Product Details */}
               <div className="card-content">
                 <h3 className="product-name">{product.name}</h3>
-                
+
                 {/* Price */}
                 <div className="price-section">
                   <span className="current-price">${product.price}</span>
@@ -173,7 +173,7 @@ const CardCarousel = () => {
                     <span className="original-price">${product.originalPrice}</span>
                   )}
                 </div>
-                
+
                 {/* Rating and Reviews */}
                 <div className="rating-section">
                   <div className="stars">

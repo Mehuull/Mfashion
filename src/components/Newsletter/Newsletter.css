@@ -1,0 +1,245 @@
+.newsletter-section {
+    padding: 6rem 1rem;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decorations */
+.newsletter-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.circle-deco {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(79, 209, 199, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -50px;
+    left: -100px;
+}
+
+.circle-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Main Card */
+.newsletter-card {
+    display: flex;
+    background: #1a1a1a;
+    /* Dark premium background */
+    border-radius: 20px;
+    overflow: hidden;
+    /* Keep standard content inside */
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    min-height: 500px;
+}
+
+/* Image Side */
+.newsletter-image-side {
+    flex: 1;
+    position: relative;
+    min-width: 350px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    /* Diagonal cut */
+}
+
+.newsletter-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.newsletter-card:hover .newsletter-img {
+    transform: scale(1.05);
+    /* Zoom effect on hover */
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.6) 100%);
+    pointer-events: none;
+}
+
+/* Content Side */
+.newsletter-content-side {
+    flex: 1.2;
+    padding: 3rem 4rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+/* Icon Badge */
+.icon-badge {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #4FD1C7;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Typography */
+.newsletter-title {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #4FD1C7;
+    font-style: italic;
+}
+
+.newsletter-desc {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 450px;
+}
+
+.discount-text {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 2px solid #4FD1C7;
+}
+
+/* Animated Input Field */
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    position: relative;
+    align-items: flex-end;
+    /* Align button to bottom of input */
+}
+
+.input-group {
+    position: relative;
+    flex: 1;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #444;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-input:focus,
+.newsletter-input:not(:placeholder-shown) {
+    border-bottom-color: #4FD1C7;
+}
+
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #888;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Move label up on focus or if text exists */
+.newsletter-input:focus~.input-label,
+.newsletter-input:not(:placeholder-shown)~.input-label {
+    top: -20px;
+    font-size: 0.8rem;
+    color: #4FD1C7;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+    padding: 0.8rem 2rem;
+    background: #4FD1C7;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 209, 199, 0.3);
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.subscribe-btn:hover .btn-icon {
+    transform: translateX(4px) translateY(-4px);
+}
+
+.privacy-note {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .newsletter-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .newsletter-image-side {
+        min-height: 250px;
+        clip-path: none;
+        /* Remove angle on mobile */
+    }
+
+    .newsletter-content-side {
+        padding: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .subscribe-btn {
+        justify-content: center;
+    }
+}

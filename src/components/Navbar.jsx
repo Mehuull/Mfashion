@@ -85,31 +85,7 @@ const Navbar = () => {
               </a>
 
               <div className="dropdown-panel">
-                <ul className="dropdown-panel-list">
-                  <li className="menu-title">
-                    <a href="#">Electronics</a>
-                  </li>
 
-                  <li className="panel-list-item">
-                    <a href="#">Desktop</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Laptop</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Camera</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Tablet</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Headphone</a>
-                  </li>
-                </ul>
 
                 <ul className="dropdown-panel-list">
                   <li className="menu-title">
@@ -163,31 +139,7 @@ const Navbar = () => {
                   </li>
                 </ul>
 
-                <ul className="dropdown-panel-list">
-                  <li className="menu-title">
-                    <a href="#">Electronics</a>
-                  </li>
 
-                  <li className="panel-list-item">
-                    <a href="#">Smart Watch</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Smart TV</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Keyboard</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Mouse</a>
-                  </li>
-
-                  <li className="panel-list-item">
-                    <a href="#">Microphone</a>
-                  </li>
-                </ul>
               </div>
             </li>
 
@@ -329,9 +281,8 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       <nav
-        className={`mobile-navigation-menu has-scrollbar ${
-          mobileMenuOpen ? "active" : ""
-        }`}
+        className={`mobile-navigation-menu has-scrollbar ${mobileMenuOpen ? "active" : ""
+          }`}
       >
         <div className="menu-top">
           <h2 className="menu-title">Menu</h2>
@@ -349,9 +300,8 @@ const Navbar = () => {
 
           <li className="menu-category">
             <button
-              className={`accordion-menu ${
-                activeAccordion === 0 ? "active" : ""
-              }`}
+              className={`accordion-menu ${activeAccordion === 0 ? "active" : ""
+                }`}
               onClick={() => toggleAccordion(0)}
             >
               <p className="menu-title">Men's</p>
@@ -365,9 +315,8 @@ const Navbar = () => {
             </button>
 
             <ul
-              className={`submenu-category-list ${
-                activeAccordion === 0 ? "active" : ""
-              }`}
+              className={`submenu-category-list ${activeAccordion === 0 ? "active" : ""
+                }`}
             >
               <li className="submenu-category">
                 <a href="#" className="submenu-title">
@@ -397,9 +346,8 @@ const Navbar = () => {
 
           <li className="menu-category">
             <button
-              className={`accordion-menu ${
-                activeAccordion === 1 ? "active" : ""
-              }`}
+              className={`accordion-menu ${activeAccordion === 1 ? "active" : ""
+                }`}
               onClick={() => toggleAccordion(1)}
             >
               <p className="menu-title">Women's</p>
@@ -413,9 +361,8 @@ const Navbar = () => {
             </button>
 
             <ul
-              className={`submenu-category-list ${
-                activeAccordion === 1 ? "active" : ""
-              }`}
+              className={`submenu-category-list ${activeAccordion === 1 ? "active" : ""
+                }`}
             >
               <li className="submenu-category">
                 <a href="#" className="submenu-title">
@@ -445,9 +392,8 @@ const Navbar = () => {
 
           <li className="menu-category">
             <button
-              className={`accordion-menu ${
-                activeAccordion === 2 ? "active" : ""
-              }`}
+              className={`accordion-menu ${activeAccordion === 2 ? "active" : ""
+                }`}
               onClick={() => toggleAccordion(2)}
             >
               <p className="menu-title">Jewelry</p>
@@ -461,9 +407,8 @@ const Navbar = () => {
             </button>
 
             <ul
-              className={`submenu-category-list ${
-                activeAccordion === 2 ? "active" : ""
-              }`}
+              className={`submenu-category-list ${activeAccordion === 2 ? "active" : ""
+                }`}
             >
               <li className="submenu-category">
                 <a href="#" className="submenu-title">
@@ -493,9 +438,8 @@ const Navbar = () => {
 
           <li className="menu-category">
             <button
-              className={`accordion-menu ${
-                activeAccordion === 3 ? "active" : ""
-              }`}
+              className={`accordion-menu ${activeAccordion === 3 ? "active" : ""
+                }`}
               onClick={() => toggleAccordion(3)}
             >
               <p className="menu-title">Perfume</p>
@@ -509,9 +453,8 @@ const Navbar = () => {
             </button>
 
             <ul
-              className={`submenu-category-list ${
-                activeAccordion === 3 ? "active" : ""
-              }`}
+              className={`submenu-category-list ${activeAccordion === 3 ? "active" : ""
+                }`}
             >
               <li className="submenu-category">
                 <a href="#" className="submenu-title">

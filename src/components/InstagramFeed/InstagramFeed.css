@@ -1,0 +1,128 @@
+.insta-section {
+    padding: 4rem 1rem;
+    background-color: #fcfcfc;
+}
+
+/* Override global title margin for this section to bring subtitle closer */
+.insta-section .section-title {
+    margin-bottom: 0.5rem;
+}
+
+.insta-subtitle {
+    text-align: center;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    display: block;
+}
+
+.insta-grid {
+    display: grid;
+    /* Default: 6 columns for large screens (1 row) */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .insta-grid {
+        /* Tablet/Small Laptop: 3 columns (2 rows) */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.insta-item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.insta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+/* Icon Wrapper for Stacking */
+.icon-wrapper {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    /* Ensure it captures mouse events */
+}
+
+/* Base Icon Style */
+.insta-icon {
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 1. White Icon (Default) */
+.white-icon {
+    color: white;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 2. Gradient Icon (Hidden by default) */
+.gradient-icon {
+    opacity: 0;
+    z-index: 2;
+    /* Fill is handled by the inline style in JSX referring to the SVG def */
+}
+
+/* --- INTERACTION LOGIC --- */
+
+/* 1. Show Overlay when hovering the card image */
+.insta-item:hover .insta-overlay {
+    opacity: 1;
+}
+
+/* 2. Scale image when hovering card */
+.insta-item:hover img {
+    transform: scale(1.1);
+}
+
+/* 3. ONLY change to Gradient Icon when hovering THE ICON ITSELF (.icon-wrapper) */
+.icon-wrapper:hover .white-icon {
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.icon-wrapper:hover .gradient-icon {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
